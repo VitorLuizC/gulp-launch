@@ -1,0 +1,35 @@
+{
+  "name": "gulp-launch",
+  "version": "1.0.0",
+  "description": "Setup functions as tasks in multiple files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/VitorLuizC/gulp-launch.git"
+  },
+  "keywords": [
+    "gulp",
+    "function",
+    "glob",
+    "commonjs"
+  ],
+  "author": "Vitor Luiz Cavalcanti <vitorluizc@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VitorLuizC/gulp-launch/issues"
+  },
+  "homepage": "https://github.com/VitorLuizC/gulp-launch#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "glob": "^7.1.1",
+    "gulp-util": "^3.0.8"
+  }
+}
