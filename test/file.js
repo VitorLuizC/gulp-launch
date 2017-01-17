@@ -24,17 +24,22 @@ describe('Module ./lib/file.js -> Tests', () => {
 
   describe('Method obtain() ->', () => {
     it('Require files using paths', () => {
-      file.obtain(['./test/case/file.js'], '../', obtainedFile => {
+      file.obtain(['./test/case/file.js'], './', obtainedFile => {
         const file = require('./case/file.js');
-
         assert(obtainedFile === file);
       });
     });
 
     it('Get basename from file obtained', () => {
-      file.obtain(['./test/case/file.js'], '../', (obtainedFile, basename) => {
-
+      file.obtain(['./test/case/file.js'], './', (obtainedFile, basename) => {
         assert(basename === 'file');
+      });
+    });
+
+    it('Change the root', () => {
+      file.obtain(['./case/file.js'], __dirname, obtainedFile => {
+        const file = require('./case/file.js');
+        assert(obtainedFile === file);
       });
     });
   });

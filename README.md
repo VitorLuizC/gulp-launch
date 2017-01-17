@@ -14,11 +14,23 @@ On **gulpfile.js** require **gulp-launch** module and call then with pattern of 
 Ex.
 
 ```js
+const gulp = require('gulp');
 const launch = require('gulp-launch');
 
-launch("./task/**/*.js");
+const tasks = {
+  build: ['clean', 'transpile'],
+  start() {
+    gulp.watch('./src/**/*.js', ['transpile']);
+  }
+};
+
+tasks.start.dependencies = ['build'];
+
+launch.from("./task/**/*.js"); // Launch all tasks from glob matched files.
+launch(tasks, { strict: true }); // Launch tasks from Object, Function* or Array*.
 ```
-Your task files should include yout functions as tasks and export then.
+
+Your task files should include functions as tasks and export then.
 
 Ex.
 
@@ -55,3 +67,7 @@ So, just start task normally. :heart:
 ```sh
 gulp transpile
 ```
+
+# Errors
+
+file.obtain use module root dir
