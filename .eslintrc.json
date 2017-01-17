@@ -9,5 +9,11 @@
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
+  },
+  "globals": {
+    "beforeEach": true,
+    "afterEach": true,
+    "describe": true,
+    "it": true
   }
 }
