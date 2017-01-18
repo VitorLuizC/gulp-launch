@@ -70,4 +70,5 @@ gulp transpile
 
 # Errors
 
-file.obtain use module root dir
+1 - Require files using module's root as default.
+2 - Glob and require are sync and could be slow.
