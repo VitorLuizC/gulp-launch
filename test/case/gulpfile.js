@@ -1,5 +1,9 @@
 'use strict';
 
-const launch = require('../../');
+const gulp = require('gulp');
+const launch = require('../../')(gulp);
+const log = require('./file.js');
 
-launch.from('./file.js', { root: __dirname });
+launch(log, 'log', {
+  verbose: true
+});

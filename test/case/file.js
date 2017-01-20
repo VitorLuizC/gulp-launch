@@ -4,4 +4,18 @@ function log() {
   console.log('Hello world!');
 }
 
-module.exports = {log};
+log.dependencies = ['logBefore'];
+
+function logBefore() {
+  console.log("::before");
+}
+
+function logAfter() {
+  console.log("::after");
+}
+
+logAfter.dependencies = log;
+
+const logGroup = ['logBefore', 'log', 'logAfter'];
+
+module.exports = {log, logAfter, logBefore, logGroup};
