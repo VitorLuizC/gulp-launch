@@ -1,4 +1,6 @@
 # gulp-launch
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/VitorLuizC/gulp-launch.svg)](https://greenkeeper.io/)
 Setup functions as tasks in multiple files.
 
 ## Install
